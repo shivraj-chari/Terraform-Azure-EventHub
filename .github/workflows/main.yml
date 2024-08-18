@@ -8,5 +8,8 @@ on:
 jobs:
   deploy:
     uses: shivraj-chari/terraform-az-common-workflow/.github/workflows/terraform-deployment.yml@master
+    with:
+      terraform_directory: './terraform'
     secrets:
       azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
+      
