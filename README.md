@@ -1,4 +1,4 @@
-# terraform-az-eventhub
+# terraform-Azure-Eventhub-Namespace
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
