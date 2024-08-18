@@ -1,0 +1,14 @@
+name: Deploy Terraform to Azure
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  deploy:
+    uses: shivraj-chari/terraform-az-common-workflow/.github/workflows/terraform-deployment.yml@main
+    with:
+      azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
+      terraform_directory: './terraform'
