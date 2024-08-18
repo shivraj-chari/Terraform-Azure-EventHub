@@ -14,6 +14,7 @@ resource "azurerm_notification_hub" "notification_hub" {
   resource_group_name = var.resource_group_name
   location            = var.location
   tags                = var.tags
+  #the credentials has to be valid as its being validated during deployment
   dynamic "apns_credential" {
     for_each = length(var.apns_credential) > 0 ? [1] : []
     content {
@@ -24,6 +25,7 @@ resource "azurerm_notification_hub" "notification_hub" {
       token            = var.apns_credential.token
     }
   }
+  #the credentials has to be valid as its being validated during deployment
   dynamic "gcm_credential" {
     for_each = length(var.gcm_credential) > 0 ? [1] : []
     content {

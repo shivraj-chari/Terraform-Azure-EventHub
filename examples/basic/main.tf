@@ -1,5 +1,5 @@
 module "notification" {
-  source                = "../.."
+  source                = "git::https://github.com/shivraj-chari/terraform-az-eventhub.git?ref=master"
   namespace_name        = var.namespace_name
   notification_hub_name = var.notification_hub_name
   resource_group_name   = var.resource_group_name
