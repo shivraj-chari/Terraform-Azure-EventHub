@@ -12,3 +12,4 @@ jobs:
       terraform_directory: './terraform'
     secrets:
       azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
+      
