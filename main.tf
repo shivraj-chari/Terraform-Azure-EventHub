@@ -6,7 +6,7 @@ resource "azurerm_notification_hub_namespace" "notification_hub_namespace" {
   sku_name            = var.sku_name
   enabled             = var.enabled
   tags                = var.tags
-}
+} 
 
 resource "azurerm_notification_hub" "notification_hub" {
   name                = var.notification_hub_name
